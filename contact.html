@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <img src="images/Gridzilla.png">
+            <input type="text" name="search" placeholder="Enter your search...">
+        </div>
+        <ul id="nav">
+            <li><a href="home.html">HOME<span></span></a></li>
+            <li><a href="about.html">ABOUT<span></span></a></li>
+            <li><a href="blog.html">BLOG<span></span></a></li>
+            <li><a href="#" class="active">CONTACT<span></span></a></li>
+        </ul>
+        <div class="wrapper">
+            <h1>Contact Us. Locate Us. Send Us Your Thoughts!</h1>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+            Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+            Duis sagittis ipsum. Praesent mauris. Maecenas in magna mollis lectus lacinia mollis.
+
+        </div>
+        <div id="googleMap"></div>
+        <form id="contactForm">
+            <input type="text" placeholder="FIRST NAME">
+            <br>
+            <input type="text" placeholder="LAST NAME">
+            <br>
+            <input type="email" placeholder="EMAIL ADRESS">
+            <br>
+            <textarea placeholder="MESSAGE"></textarea>
+        </form>
+        <button type="submit" id="submitButton">
+            <img src="images/link%20icon.png">
+            Submit
+        </button>
+
+        <footer>
+            <div id="social-media">
+                <a href="http://twitter.com" class="social-icon">
+                    <img src="images/Twitter%20Icon.png">
+                </a>
+                <a href="http://rss.com" class="social-icon">
+                    <img src="images/RSS%20Icon.png">
+                </a>
+                <a href="http://facebook.com" class="social-icon">
+                    <img src="images/Facebook%20Icon.png">
+                </a>
+                <a href="http://pinterest.com" class="social-icon">
+                    <img src="images/Pinterest.png">
+                </a>
+            </div>
+            <div id="contacts">
+                <h4>Best PSD Freebies  |  info@bestpsdfreebies.com</h4>
+                <p>
+                    Copyright 2012 Gridzilla Theme
+                    <a href="http://bestpsdfreebies.com">www.bestpsdfreebies.com</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        function myMap() {
+            var myLatLng = {lat: 55.789936, lng: 37.496146};
+            var map =  new google.maps.Map(document.getElementById("googleMap"), {
+                center: myLatLng,
+                zoom: 16
+            });
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Home'
+            });
+        }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3Id8ikOkjXvxD4fIlgvb6selHY5U2eZ4&callback=myMap"></script>
+</body>
+</html>
